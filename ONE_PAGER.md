@@ -8,15 +8,15 @@ The repo has my scripts, raw logs, and a repros folder with one short script per
 
 **What I liked.** The Playground shows first token time, total time, tokens and a request ID under every reply. The New task form has a Get code button that turns the form into SDK code.
 
-**What I didn't like.** Refused requests don't show up in Logs. The docs say every response has a request ID, including refused ones, and to send that ID when reporting a problem. I made about 30 refused calls, mostly 429s. Logs still said Errors 0%, and searching for one of those IDs said no request with that ID in the last 30 days. A normal request sent seconds later did show up, so it wasn't a delay. I also couldn't find my remaining credit on the Usage or Billing pages.
+**What I didn't like.** Refused requests don't show up in Logs. The docs say every response has a request ID, including refused ones, and to send that ID when reporting a problem. I made about 30 refused calls, mostly 429s. Logs still said Errors 0%, and searching for one of those IDs said no request with that ID in the last 30 days. A normal request sent seconds later did show up, so it wasn't a delay. The credit info is also confusing. The Plans page and the docs say the free plan gets $10 once at signup, but Settings, Billing shows a $10 balance plus a $5 monthly credit, and my spend came out of the $5.
 
-**What I would improve.** Log refused requests so their IDs can be found, and show the credit balance on the Usage page.
+**What I would improve.** Log refused requests so their IDs can be found, and make the credit info match on every page.
 
 ## 2. Inference API
 
 **What I liked.** It works like the OpenAI API, so plain HTTP calls just worked. On fastlane-1 the median time was 355 ms over 20 different prompts, and the first streamed token came at 107 ms. The rate limit matched the docs. I sent 15 calls at once and got 11 through and 4 rate limited, with correct Retry-After headers.
 
-**What I didn't like.** The reply cache fooled me at first. My first benchmark said 55 ms, but 9 of the 10 calls were cache hits because I reused the same prompt. The cache is in the docs, but it is on by default and the only sign of a hit is input tokens being 0. A cache hit also returns the same text with a different output token count. In three tries it went from 30 to 39, 35 to 52, and 31 to 40.
+**What I didn't like.** The reply cache fooled me at first. My first benchmark said 56 ms, but 9 of the 10 calls were cache hits because I reused the same prompt. The cache is in the docs, but it is on by default and the only sign of a hit is input tokens being 0. A cache hit also returns the same text with a different output token count. In three tries it went from 30 to 39, 35 to 52, and 31 to 40.
 
 **What I would improve.** Add a header that says cache hit or miss, return the same token count for the same reply, and tell people in the docs to turn the cache off when benchmarking.
 

@@ -18,7 +18,9 @@ Logs does label cache hits as "Cache hit", but the API response doesn't.
 
 New task form: goal, start URL, model, and options for time, cost and output schema. The defaults are 30 minutes and 2 dollars, which is 20 percent of the signup credit. Get code turns the form into SDK code. While a task runs there is no live view. Screenshots only show up at the end.
 
-Usage and Billing: I couldn't find the remaining signup credit on either page. Billing says the Developer plan has 1 concurrent session.
+Credits: the Plans page and the pricing docs say the Developer plan gets $10 once at signup. Settings, Billing shows a $10.00 balance and also "$0.13 of $5.00 monthly credit used, resets Dec 1". The $5 monthly credit isn't in the docs, and my spend came out of it, not the $10. Usage shows the total ($0.13) but not what's left. The Plans page says the Developer plan has 1 concurrent session.
+
+Analytics shows Success rate 100% over 86 requests, so refused calls aren't counted there either.
 
 ## Inference API
 
@@ -28,7 +30,7 @@ Responses and Chat Completions both worked. Errors use the OpenAI format and say
 
 Rate limit: the docs say a burst of 10, then about 2 per second. 15 calls at once gave 11 OK and 4 rate limited, each with Retry-After 1. In my first run I sent the burst right after 10 other calls, so only 3 got through. That was my mistake, not a bug.
 
-Reply cache: this is in the docs. A hit costs nothing, shows 0 input tokens, and you can turn it off with the X-Moss-Cache header. I missed it at first. My first benchmark said 55 ms, but 9 of 10 calls were cache hits. What is not in the docs is that a hit reports a different output token count for the exact same text. I saw 35 to 52, 30 to 39, and 31 to 40. Proof: results/inference_run1_cached.json, results/inference.json, repros/output/02_*.
+Reply cache: this is in the docs. A hit costs nothing, shows 0 input tokens, and you can turn it off with the X-Moss-Cache header. I missed it at first. My first benchmark said 56 ms, but 9 of 10 calls were cache hits. What is not in the docs is that a hit reports a different output token count for the exact same text. I saw 35 to 52, 30 to 39, and 31 to 40. Proof: results/inference_run1_cached.json, results/inference.json, repros/output/02_*.
 
 An index name that doesn't exist gets a 403 that says the index is outside this project. This matches the docs.
 
