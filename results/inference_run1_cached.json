@@ -1,0 +1,130 @@
+{
+  "model": "moss/fastlane-1",
+  "models": {
+    "status": 200,
+    "elapsed_s": 0.5378712000019732,
+    "ids": [
+      "moss/fastlane-1",
+      "openai/gpt-6-luna",
+      "openai/gpt-6.1-terra",
+      "openai/gpt-6.1-sol",
+      "openai/gpt-6-astra",
+      "anthropic/claude-haiku-5.5",
+      "anthropic/claude-sonnet-5.5",
+      "anthropic/claude-opus-5.5",
+      "anthropic/claude-fable-5.1",
+      "google/gemini-3.8-flash",
+      "google/gemini-3.5-flash-lite",
+      "google/gemini-4-argon",
+      "z-ai/glm-5.3",
+      "moonshotai/kimi-k3",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.8-flash",
+      "deepseek/deepseek-v4.1-flash-1017",
+      "z-ai/glm-5.3-flash",
+      "minimax/minimax-m3.1-flash"
+    ]
+  },
+  "responses_latency_s": {
+    "n": 10,
+    "median": 0.05577284999890253,
+    "p90": 0.4760309999983292,
+    "min": 0.05404090000229189,
+    "max": 0.4760309999983292
+  },
+  "ratelimit_headers_sample": {
+    "x-ratelimit-limit-requests": "120",
+    "x-ratelimit-limit-tokens": "600000",
+    "x-ratelimit-remaining-requests": "1",
+    "x-ratelimit-remaining-tokens": "599882",
+    "x-ratelimit-reset-requests": "5s",
+    "x-ratelimit-reset-tokens": "1s"
+  },
+  "streaming": {
+    "status": 200,
+    "ttft_s": 0.0546466000014334,
+    "total_s": 0.05570270000316668,
+    "events": 9
+  },
+  "chat_completions": {
+    "status": 429,
+    "elapsed_s": 0.05182339999737451
+  },
+  "errors": {
+    "bad_key": {
+      "status": 401,
+      "body": {
+        "error": {
+          "message": "The project credentials were rejected",
+          "type": "authentication_error",
+          "code": "authentication_error",
+          "request_id": "f3f970c0c6444545bea02990bfd9cbb5"
+        }
+      }
+    },
+    "unknown_model": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "Unknown model nope/nope. Send model moss/fastlane-1, or a vendor model name with your own key in X-Moss-Provider-Key.",
+          "type": "invalid_request_error",
+          "code": "model_not_found",
+          "request_id": "9e102a2bcd304da0be43ed8a1cdb08d1"
+        }
+      }
+    },
+    "missing_input": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "input must be a string or a list of items",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "df9f0538895e4ad58ff1032ed23ba0a0"
+        }
+      }
+    },
+    "unknown_index": {
+      "status": 403,
+      "body": {
+        "error": {
+          "message": "X-Moss-Indexes names an index outside this project",
+          "type": "permission_error",
+          "code": "permission_error",
+          "request_id": "cd119dc56c85411c95ea1215f63f6598"
+        }
+      }
+    },
+    "empty_body": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "input must be a string or a list of items",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "8758d2607dfa4401bd3db0fb5e3207d5"
+        }
+      }
+    }
+  },
+  "burst": {
+    "sent": 15,
+    "ok": 3,
+    "429": 12,
+    "other": [],
+    "retry_after_seen": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  }
+}

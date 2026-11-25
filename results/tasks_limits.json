@@ -1,0 +1,82 @@
+{
+  "limits": {
+    "tiny_budget": {
+      "status_trail": [
+        [
+          0.2,
+          "running"
+        ],
+        [
+          50.8,
+          "failed"
+        ]
+      ],
+      "final": {
+        "id": "task_fc476bb45d5c47e49ecf4529bdec160b",
+        "status": "failed",
+        "result": null,
+        "verification": null,
+        "usage": {
+          "cost": {
+            "model_usd": 0.0101,
+            "total_usd": 0.010433,
+            "browser_usd": 0.0003333333333333333,
+            "traffic_usd": null
+          },
+          "steps": 5,
+          "cost_usd": 0.0101,
+          "model_calls": 6,
+          "input_tokens": 39653,
+          "output_tokens": 2127,
+          "browser_minutes": 0.75,
+          "browser_seconds": 45,
+          "browser_traffic_mb": null,
+          "cached_input_tokens": 27611
+        },
+        "error": {
+          "code": "budget_exceeded",
+          "message": "Spent $0.01"
+        }
+      }
+    },
+    "tiny_runtime": {
+      "status_trail": [
+        [
+          0.0,
+          "running"
+        ],
+        [
+          65.7,
+          "failed"
+        ]
+      ],
+      "final": {
+        "id": "task_dc2a59f831de4b98a025217a6ed4a909",
+        "status": "failed",
+        "result": null,
+        "verification": null,
+        "usage": {
+          "cost": {
+            "model_usd": 0.017305,
+            "total_usd": 0.017638,
+            "browser_usd": 0.0003333333333333333,
+            "traffic_usd": null
+          },
+          "steps": 8,
+          "cost_usd": 0.017305,
+          "model_calls": 10,
+          "input_tokens": 134497,
+          "output_tokens": 3484,
+          "browser_minutes": 1.01,
+          "browser_seconds": 61,
+          "browser_traffic_mb": null,
+          "cached_input_tokens": 85331
+        },
+        "error": {
+          "code": "time_limit",
+          "message": "Stopped after 60 s"
+        }
+      }
+    }
+  }
+}

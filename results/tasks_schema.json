@@ -1,0 +1,47 @@
+{
+  "schema": {
+    "status_trail": [
+      [
+        0.1,
+        "running"
+      ],
+      [
+        20.3,
+        "completed"
+      ]
+    ],
+    "final": {
+      "id": "task_43300bd04eab4e639445c47fd94ca2eb",
+      "status": "completed",
+      "result": {
+        "output": {
+          "title": "Example Domain",
+          "mentions_domain": true
+        },
+        "output_text": "{\"title\":\"Example Domain\",\"mentions_domain\":true}"
+      },
+      "verification": {
+        "method": "output_schema",
+        "passed": true
+      },
+      "usage": {
+        "cost": {
+          "model_usd": 0.004503,
+          "total_usd": 0.004836,
+          "browser_usd": 0.0003333333333333333,
+          "traffic_usd": null
+        },
+        "steps": 2,
+        "cost_usd": 0.004503,
+        "model_calls": 3,
+        "input_tokens": 11688,
+        "output_tokens": 430,
+        "browser_minutes": 0.25,
+        "browser_seconds": 15,
+        "browser_traffic_mb": null,
+        "cached_input_tokens": 4136
+      },
+      "error": null
+    }
+  }
+}

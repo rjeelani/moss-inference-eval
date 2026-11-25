@@ -1,0 +1,5 @@
+﻿first call: 737 ms, input_tokens=131, output_tokens=31
+second call: 390 ms, input_tokens=0, output_tokens=40
+same text: True
+text: A semantic index is a database or search structure that organizes data based on the meaning and context of the content, rather than just matching exact keywords.
+

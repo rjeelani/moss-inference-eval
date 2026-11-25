@@ -1,0 +1,23 @@
+{
+  "idempotency": {
+    "statuses": [
+      202,
+      202,
+      422
+    ],
+    "ids": [
+      "task_3f35d9cbc55044c2840e8de37bafd114",
+      "task_3f35d9cbc55044c2840e8de37bafd114",
+      null
+    ],
+    "same_id_on_replay": true,
+    "different_body_response": {
+      "error": {
+        "message": "This Idempotency-Key was sent with another body. Send a new key for a new task",
+        "type": "invalid_request_error",
+        "code": "idempotency_key_reused",
+        "request_id": "e08865903a044216beca9c66177f97a4"
+      }
+    }
+  }
+}

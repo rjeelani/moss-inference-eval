@@ -1,0 +1,67 @@
+{
+  "happy": {
+    "create_status": 202,
+    "create_latency_s": 0.46096370000304887,
+    "wall_s": 20.9,
+    "status_trail": [
+      [
+        0.1,
+        "running"
+      ],
+      [
+        20.4,
+        "completed"
+      ]
+    ],
+    "final": {
+      "id": "task_5904c4d207bd4b26863326ecf55eaa5c",
+      "status": "completed",
+      "result": {
+        "output": null,
+        "output_text": "- **Main heading:** No heading element was present on the loaded page.\n- **First link URL:** https://iana.org/help/example-domains"
+      },
+      "verification": {
+        "method": "agent_reported",
+        "passed": null
+      },
+      "usage": {
+        "cost": {
+          "model_usd": 0.005197,
+          "total_usd": 0.00553,
+          "browser_usd": 0.0003333333333333333,
+          "traffic_usd": null
+        },
+        "steps": 3,
+        "cost_usd": 0.005197,
+        "model_calls": 4,
+        "input_tokens": 19244,
+        "output_tokens": 704,
+        "browser_minutes": 0.32,
+        "browser_seconds": 19,
+        "browser_traffic_mb": null,
+        "cached_input_tokens": 9222
+      },
+      "error": null
+    },
+    "files": [
+      200,
+      {
+        "object": "list",
+        "data": [
+          {
+            "path": "screenshots/agent/ses_def49453dffeS6HDI3NKaImP0n-1795576750968-000.png",
+            "bytes": 285823
+          },
+          {
+            "path": "screenshots/runner/00001-step-2.png",
+            "bytes": 285823
+          },
+          {
+            "path": "screenshots/runner/00002-step-4.png",
+            "bytes": 285823
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "model": "moss/fastlane-1",
+  "models": {
+    "status": 200,
+    "elapsed_s": 0.4412277000010363,
+    "ids": [
+      "moss/fastlane-1",
+      "openai/gpt-6-luna",
+      "openai/gpt-6.1-terra",
+      "openai/gpt-6.1-sol",
+      "openai/gpt-6-astra",
+      "anthropic/claude-haiku-5.5",
+      "anthropic/claude-sonnet-5.5",
+      "anthropic/claude-opus-5.5",
+      "anthropic/claude-fable-5.1",
+      "google/gemini-3.8-flash",
+      "google/gemini-3.5-flash-lite",
+      "google/gemini-4-argon",
+      "z-ai/glm-5.3",
+      "moonshotai/kimi-k3",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.8-flash",
+      "deepseek/deepseek-v4.1-flash-1017",
+      "z-ai/glm-5.3-flash",
+      "minimax/minimax-m3.1-flash"
+    ]
+  },
+  "responses_latency_s": {
+    "n": 20,
+    "median": 0.3550152000025264,
+    "p90": 0.41922750000230735,
+    "min": 0.3194976000013412,
+    "max": 0.43474609999975655
+  },
+  "ratelimit_headers_sample": {
+    "x-ratelimit-limit-requests": "120",
+    "x-ratelimit-limit-tokens": "600000",
+    "x-ratelimit-remaining-requests": "9",
+    "x-ratelimit-remaining-tokens": "599878",
+    "x-ratelimit-reset-requests": "1s",
+    "x-ratelimit-reset-tokens": "1s"
+  },
+  "reply_cache": {
+    "latency_s": [
+      0.31718540000292705,
+      0.06503009999869391
+    ],
+    "same_text": true,
+    "usage": [
+      {
+        "total_tokens": 162,
+        "input_tokens": 132,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 30,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "total_tokens": 39,
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 39,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    ],
+    "cache_headers": [
+      {},
+      {}
+    ]
+  },
+  "streaming": {
+    "status": 200,
+    "ttft_s": 0.10711760000413051,
+    "total_s": 0.5883660000035889,
+    "events": 36
+  },
+  "chat_completions": {
+    "status": 200,
+    "elapsed_s": 0.18292650000512367
+  },
+  "errors": {
+    "bad_key": {
+      "status": 401,
+      "body": {
+        "error": {
+          "message": "The project credentials were rejected",
+          "type": "authentication_error",
+          "code": "authentication_error",
+          "request_id": "9dac001434b24c3ab93fb3d3b91d9810"
+        }
+      }
+    },
+    "unknown_model": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "Unknown model nope/nope. Send model moss/fastlane-1, or a vendor model name with your own key in X-Moss-Provider-Key.",
+          "type": "invalid_request_error",
+          "code": "model_not_found",
+          "request_id": "eaa3e5ed7f0f4caaad6a1e64e5d30486"
+        }
+      }
+    },
+    "missing_input": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "input must be a string or a list of items",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "63abd5a1cf4a4ef9ab0579138bf4b0ed"
+        }
+      }
+    },
+    "unknown_index": {
+      "status": 403,
+      "body": {
+        "error": {
+          "message": "X-Moss-Indexes names an index outside this project",
+          "type": "permission_error",
+          "code": "permission_error",
+          "request_id": "505497da7fb7455da26fed7ed800a64f"
+        }
+      }
+    },
+    "empty_body": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "input must be a string or a list of items",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "857a195ff57c41ef84fb0eadf6dc4f10"
+        }
+      }
+    }
+  },
+  "burst": {
+    "sent": 15,
+    "ok": 11,
+    "429": 4,
+    "other": [],
+    "retry_after_seen": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  }
+}

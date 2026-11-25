@@ -1,0 +1,4 @@
+﻿"60" as a string -> 400 limits.max_runtime_seconds must be a number from 60 to 7200
+60.5 as a number -> 202 | saved limits: {'max_cost_usd': 0.05, 'max_runtime_seconds': 60}
+cancelled task_4a0a74be15804d39b4de5dc002c9c63f
+

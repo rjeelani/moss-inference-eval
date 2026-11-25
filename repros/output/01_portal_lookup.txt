@@ -1,0 +1,8 @@
+Portal check for repro 1 (Nov 24, about 22:36 local)
+
+Logs & Traces > Look up a request ID > f5709b5f68d04f89a0bc3634b2674e75
+Result: "No request with that ID in the last 30 days."
+
+To rule out a delay: the two successful calls from repro 2, sent a few seconds after repro 1,
+were already in the Requests list (22:35:01, one "OK" and one "Cache hit").
+The Errors tile still said 0%.

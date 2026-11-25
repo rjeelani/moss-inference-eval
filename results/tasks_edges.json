@@ -1,0 +1,139 @@
+{
+  "edges": {
+    "goal_whitespace_only": {
+      "status": 400,
+      "accepted": false,
+      "message": "goal must be text of 1 to 20000 characters",
+      "echo_limits": null,
+      "id": null
+    },
+    "goal_exactly_20000": {
+      "status": 202,
+      "accepted": true,
+      "message": null,
+      "echo_limits": {
+        "max_cost_usd": 0.05,
+        "max_runtime_seconds": 60
+      },
+      "id": "task_9888d7292baa4282898040069afd5682"
+    },
+    "cost_as_string": {
+      "status": 400,
+      "accepted": false,
+      "message": "limits.max_cost_usd must be a number from 0.01 to 50",
+      "echo_limits": null,
+      "id": null
+    },
+    "cost_as_bool_true": {
+      "status": 400,
+      "accepted": false,
+      "message": "limits.max_cost_usd must be a number from 0.01 to 50",
+      "echo_limits": null,
+      "id": null
+    },
+    "runtime_float": {
+      "status": 202,
+      "accepted": true,
+      "message": null,
+      "echo_limits": {
+        "max_cost_usd": 0.05,
+        "max_runtime_seconds": 60
+      },
+      "id": "task_3838ffb9e69744aca338d37034389c93"
+    },
+    "runtime_as_string": {
+      "status": 400,
+      "accepted": false,
+      "message": "limits.max_runtime_seconds must be a number from 60 to 7200",
+      "echo_limits": null,
+      "id": null
+    },
+    "unknown_field_in_limits": {
+      "status": 400,
+      "accepted": false,
+      "message": "limits takes max_runtime_seconds and max_cost_usd",
+      "echo_limits": null,
+      "id": null
+    },
+    "unknown_field_in_environment": {
+      "status": 400,
+      "accepted": false,
+      "message": "environment takes type, start_url and proxy_country only",
+      "echo_limits": null,
+      "id": null
+    },
+    "start_url_bare_host": {
+      "status": 202,
+      "accepted": true,
+      "message": null,
+      "echo_limits": {
+        "max_cost_usd": 0.05,
+        "max_runtime_seconds": 60
+      },
+      "id": "task_8e1d5feb5c2446439619b4b13f7b13a0"
+    },
+    "start_url_javascript": {
+      "status": 400,
+      "accepted": false,
+      "message": "environment.start_url must be an http or https URL, or a host such as example.com",
+      "echo_limits": null,
+      "id": null
+    },
+    "metadata_string": {
+      "status": 400,
+      "accepted": false,
+      "message": "metadata must be an object under 4000 bytes",
+      "echo_limits": null,
+      "id": null
+    },
+    "metadata_4001_bytes": {
+      "status": 400,
+      "accepted": false,
+      "message": "metadata must be an object under 4000 bytes",
+      "echo_limits": null,
+      "id": null
+    },
+    "schema_over_20000_bytes": {
+      "status": 400,
+      "accepted": false,
+      "message": "output_schema must be a JSON Schema object under 20000 bytes",
+      "echo_limits": null,
+      "id": null
+    },
+    "schema_invalid_jsonschema": {
+      "status": 400,
+      "accepted": false,
+      "message": "output_schema.properties.a.type must be one of object, array, string, boolean, null, integer, number, or a list of them",
+      "echo_limits": null,
+      "id": null
+    },
+    "effort_uppercase": {
+      "status": 400,
+      "accepted": false,
+      "message": "effort must be low, medium or high",
+      "echo_limits": null,
+      "id": null
+    },
+    "model_undocumented_fast_beta": {
+      "status": 202,
+      "accepted": true,
+      "message": null,
+      "echo_limits": {
+        "max_cost_usd": 0.05,
+        "max_runtime_seconds": 60
+      },
+      "id": "task_a267653da2044169bfa77e4cc88bafd5"
+    },
+    "body_over_256KiB": {
+      "status": 413,
+      "accepted": false,
+      "message": "The request body is larger than 262144 bytes",
+      "echo_limits": null,
+      "id": null
+    },
+    "runtime_NaN_raw": {
+      "status": 400,
+      "body": "{\"error\":{\"message\":\"The body must be JSON, without NaN, Infinity or numbers too big for a float\",\"type\":\"invalid_request_error\",\"code\":\"invalid_request_error\",\"request_id\":\"73dc98a6c62f4224a054634ec308218b\"}}"
+    }
+  }
+}

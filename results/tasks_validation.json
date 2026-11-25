@@ -1,0 +1,147 @@
+{
+  "validation": {
+    "unknown_top_level_field": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "Unknown field bogus",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "409ffc8b959b496c896bab337851ff1e"
+        }
+      }
+    },
+    "missing_goal": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "goal must be text of 1 to 20000 characters",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "3951b8653a9844b49aef25f3306ba9cc"
+        }
+      }
+    },
+    "missing_environment": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "environment must be {\"type\": \"browser\"}; v0 runs browser tasks only",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "f5aa7ab3715047c4af8e6937a706b91a"
+        }
+      }
+    },
+    "bad_env_type": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "environment must be {\"type\": \"browser\"}; v0 runs browser tasks only",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "8e4857a397564ae7a4e6c245cb080896"
+        }
+      }
+    },
+    "bad_start_url": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "environment.start_url must be an http or https URL, or a host such as example.com",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "ff8cc5613b6346969454d55b2bffd898"
+        }
+      }
+    },
+    "goal_too_long": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "goal must be text of 1 to 20000 characters",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "93fc41c4be2f459a83a83cbae149164a"
+        }
+      }
+    },
+    "cost_below_min": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "limits.max_cost_usd must be a number from 0.01 to 50",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "e686ccdc5b574aea8643fb3b86808ce3"
+        }
+      }
+    },
+    "cost_above_max": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "limits.max_cost_usd must be a number from 0.01 to 50",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "69728a18269342389370f532e3b8f1c8"
+        }
+      }
+    },
+    "runtime_below_min": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "limits.max_runtime_seconds must be a number from 60 to 7200",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "a18c40a611bc49708e7b20fbec57ee28"
+        }
+      }
+    },
+    "bad_effort": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "effort must be low, medium or high",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "c12c2c5bf0264e30ad26043da35ce8ab"
+        }
+      }
+    },
+    "bad_schema": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "output_schema must describe one JSON object: its \"type\" must be \"object\". For a list, put it in a property, such as {\"type\": \"object\", \"properties\": {\"items\": {\"type\": \"array\"}}}",
+          "type": "invalid_request_error",
+          "code": "invalid_request_error",
+          "request_id": "3ba79b94dd9a4551a6b69bf800f1209c"
+        }
+      }
+    },
+    "unknown_model": {
+      "status": 400,
+      "body": {
+        "error": {
+          "message": "model must be a Moss tier or a Moss catalog model that tasks serve: moss-advanced, moss-balanced, moss-balanced-handoff, moss-fast, moss-fast-beta, anthropic/claude-fable-5.1, anthropic/claude-haiku-5.5, anthropic/claude-opus-5.5, anthropic/claude-sonnet-5.5, deepseek/deepseek-v4.1-flash, deepseek/deepseek-v4.1-flash-1017, google/gemini-3.5-flash-lite, google/gemini-3.8-flash, google/gemini-4-argon, minimax/minimax-m3.1-flash, moonshotai/kimi-k3, moss/fastlane-1, openai/gpt-6-astra, openai/gpt-6-luna, openai/gpt-6.1-sol, openai/gpt-6.1-terra, qwen/qwen3.8-flash, z-ai/glm-5.3, z-ai/glm-5.3-flash",
+          "type": "invalid_request_error",
+          "code": "model_not_found",
+          "request_id": "9481ca4cc29d425d878268a5965d66b8"
+        }
+      }
+    },
+    "get_nonexistent": {
+      "status": 404,
+      "body": {
+        "error": {
+          "message": "No task with this id in this project",
+          "type": "not_found_error",
+          "code": "not_found_error",
+          "request_id": "1aec45659f884194b6572b398cca25d5"
+        }
+      }
+    }
+  }
+}

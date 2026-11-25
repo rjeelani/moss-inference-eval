@@ -1,0 +1,5 @@
+﻿created: task_e63d3bc90cd24b5f91c94477f9a65527 queued
+after cancel call: status = running | cancel_requested = True
+ended 17 s later: status = cancelled | cancel_requested = False
+cost_usd = 0.007227 | error = None
+
