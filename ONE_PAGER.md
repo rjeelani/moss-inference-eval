@@ -1,6 +1,6 @@
 # Moss Inference work sample, Rahim Jeelani
 
-Repo: <GITHUB LINK>
+Repo: https://github.com/rjeelani/moss-inference-eval
 
 The repo has my scripts, raw logs, and a repros folder with one short script per bug so you can rerun them. I spent about 13 cents in total.
 
