@@ -18,7 +18,7 @@ Logs does label cache hits as "Cache hit", but the API response doesn't.
 
 New task form: goal, start URL, model, and options for time, cost and output schema. The defaults are 30 minutes and 2 dollars, which is 20 percent of the signup credit. Get code turns the form into SDK code. While a task runs there is no live view. Screenshots only show up at the end.
 
-Credits: the Plans page and the pricing docs say the Developer plan gets $10 once at signup. Settings, Billing shows a $10.00 balance and also "$0.13 of $5.00 monthly credit used, resets Dec 1". The $5 monthly credit isn't in the docs, and my spend came out of it, not the $10. Usage shows the total ($0.13) but not what's left. The Plans page says the Developer plan has 1 concurrent session.
+Credits: the Plans page and the pricing docs say the Developer plan gets $10 once at signup. The Billing page under Settings shows a $10.00 balance and also "$0.13 of $5.00 monthly credit used, resets Dec 1". The $5 monthly credit isn't in the docs, and my spend came out of it, not the $10. Usage shows the total ($0.13) but not what's left. The Plans page says the Developer plan has 1 concurrent session.
 
 Analytics shows Success rate 100% over 86 requests, so refused calls aren't counted there either.
 
